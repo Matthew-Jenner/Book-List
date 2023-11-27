@@ -13,30 +13,20 @@ const BookList = () => {
 		</section>
 	);
 };
-
 const Book = () => {
+  const author = "Guinness World Records";
+	const title = "Guinness World Records 2024";
 	return (
 		<article className="book">
-			<Image />
-			<Title />
-			<Author />
+			<img
+				src="./images/book-1.jpg"
+				alt="Guinness World Records 2024"
+			/>
+			<h2>{title}</h2>
+			<h4>{author}</h4>
 		</article>
 	);
 };
 
-const Image = () => (
-	<img
-		src="./images/book-1.jpg"
-		alt="Guinness World Records 2024"
-	/>
-);
-const Title = () => <h2>Guinness World Records 2024</h2>;
-const Author = () => {
-	return (
-		<h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.5rem" }}>
-			Guinness World Records
-		</h4>
-	);
-};
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList />);
