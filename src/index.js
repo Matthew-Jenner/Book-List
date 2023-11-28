@@ -2,26 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-const firstBook = {
-author : "Guinness World Records",
-title : "Guinness World Records 2024", 
-img : "./images/book-1.jpg",
-}
-const secondBook = {
-  author : "Nathan Anthony",
-  title : "Bored of Lunch: The Healthy Air Fryer Book", 
-  img : "https://m.media-amazon.com/images/I/81anCS3GCbL._SY522_.jpg",
-  }
+
+const books = [
+	{
+		author: "Guinness World Records",
+		title: "Guinness World Records 2024",
+		img: "./images/book-1.jpg",
+	},
+	{
+		author: "Nathan Anthony",
+		title: "Bored of Lunch: The Healthy Air Fryer Book",
+		img: "https://m.media-amazon.com/images/I/81anCS3GCbL._SY522_.jpg",
+	},
+];
+
+const names = ["john", "peter", "susan"];
+
 const BookList = () => {
-	return (
-		<section className="booklist">
-			<Book author={firstBook.author} title={firstBook.title} img={firstBook.img}>
-      </Book>
-			<Book author={secondBook.author} title={secondBook.title} img={secondBook.img}/>
-		</section>
-	);
+	return <section className="booklist">{books}</section>;
 };
-const Book = ({img, title, author, children}) => {
+const Book = (props) => {
+  const {img, title, author} = props
+  console.log(props);
 	return (
 		<article className="book">
 			<img
@@ -30,7 +32,6 @@ const Book = ({img, title, author, children}) => {
 			/>
 			<h2>{title}</h2>
 			<h4>{author} </h4>
-      {children}
 		</article>
 	);
 };
