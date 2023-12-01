@@ -1,6 +1,6 @@
-import img1 from './images/book-1.jpg'
-import img2 from './images/book-2.jpg'
-import img3 from './images/book-3.jpg'
+import img1 from "./images/book-1.jpg";
+import img2 from "./images/book-2.jpg";
+import img3 from "./images/book-3.jpg";
 
 export const books = [
 	{
@@ -15,11 +15,10 @@ export const books = [
 		img: img2,
 		id: 2,
 	},
-    {
+	{
 		author: "Richard Osman",
 		title: "The Last Devil To Die: The Thursday Murder Club",
 		img: img3,
 		id: 3,
 	},
 ];
-
