@@ -1,5 +1,5 @@
 const Book = (props) => {
-	const { img, title, author, number, id} = props;
+	const { img, title, author, number} = props;
   // console.log(props);
   console.log(number);
 	return (
